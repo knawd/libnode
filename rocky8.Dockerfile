@@ -10,7 +10,7 @@ RUN dnf update -y
 RUN dnf repolist --all
 RUN dnf -y install epel-release
 
-RUN dnf install -y git python3 which redhat-lsb-core
+RUN dnf install -y git python3 which redhat-lsb-core gcc-c++ gcc
 
 ### wasm_nodejs doesn't use the default crun so we are creating subfolders
 WORKDIR /wasm_nodejs
